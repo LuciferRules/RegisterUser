@@ -1,0 +1,31 @@
+﻿@page
+@using System.Data.SqlClient;
+@{
+    // id is obtained when Delete button is clicked
+    String id = Request.Query["userid"];
+    try
+    {
+
+        // hook up with connectionString to SQL server
+        string connectionString = "Data Source=DESKTOP-HF7C6UH;Initial Catalog=registerdata;Integrated Security=True";
+        // fetch data with the id from `users` table
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+//            String sql = "DELETE FROM users WHERE UserID=@userid";
+            String sql = "EXEC deleteuser @userid;"; //use deleteuser stored procedure
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@userid", id);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Exception: " + ex.ToString());
+    }
+
+    //redirect the page to `Users Index` page
+    Response.Redirect("/Users/Index");
+}

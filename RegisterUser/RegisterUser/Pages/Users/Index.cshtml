@@ -1,0 +1,37 @@
+﻿@page
+@model RegisterUser.Pages.Users.IndexModel
+@{
+}
+<br />
+<h2>List of Users</h2>
+<a class='btn btn-primary btn-sm' href="/Users/Create">New User</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>UserID</th>
+            <th>UserName</th>
+            <th>UserNo</th>
+            <th>CreateDate</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listUsers)
+        {
+            <tr>
+                <td>@item.userid</td>
+                <td>@item.username</td>
+                <td>@item.userno</td>
+                <td>@item.createdate</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Users/Edit?userid=@item.userid">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/Users/Delete?userid=@item.userid">Delete</a>
+                </td>
+
+            </tr>
+
+
+
+        }
+    </tbody>
+</table>

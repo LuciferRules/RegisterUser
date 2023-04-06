@@ -1,0 +1,13 @@
+****************************************************************************************************************************************************************
+THESE 4 FILES ARE INTENDED FOR MICROSOFT SQL SERVER MANAGEMENT STUDIO ONLY
+****************************************************************************************************************************************************************
+Function:
+1. Create users table_v01.sql = will create a table named 'users', beforehand you have to create a database called 'registerdata'
+   -right click registerdata > New Query > copy&paste codes from each .sql file > Execute (green arrow button)
+2. Create selectall stored procedure.sql = will create stored procedure 'selectall', this procedure is used inside c# code.
+
+3. Create addnewuser stored procedure.sql = will create stored procedure 'addnewuser', this procedure is used inside c# code.
+
+4. Create updateuser stored procedure.sql = will create stored procedure 'updateuser', this procedure is used inside c# code.
+
+5. Create deleteuser stored procedure.sql= will create stored procedure 'deleteuser', this procedure is used inside c# code.

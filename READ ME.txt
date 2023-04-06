@@ -1,0 +1,21 @@
+***********************************************************************************************************************************************************************************
+RegisterUser IS A PROJECT TO SELECT, INSERT, UPDATE, DELETE ACCORDING TO USER CONTROL ON WEB APP GUI.
+***********************************************************************************************************************************************************************************
+
+1. HOME = Display Welcome page to guide user to use the GUI features
+
+2. PRIVACY = To remind any developers on project confidentiality and copyright
+
+3. Users = To direct webpage to view all data from 'users' table
+Sub-features:
+- Edit = Update data according to user's will and synchronize data on 'users' table on 'registerdata' database
+- Delete = Delete record(row) according to user's will and synchronize data on 'users' table on 'registerdata' database
+
+4. backup_registerdata folder = backup database from NT Service\MSSQLSERVER to ‪C:\Users\yiptu\source\repos\backup_registerdata
+***********************************************************************************************************************************************************************************  
+1. PLEASE CREATE A NEW FOLDER AT DESKTOP NAMED 'source',THEN INSIDE 'source' CREATES 'repos', FOLLOWED BY 'backup_registerdata'							    
+2. GRANT 'Full control' PERMISSION TO 'backup_registerdata' FOLDER BY `rightclick > Property > Security > Edit > Add > Enter the object names to select > NT Service\MSSQLSERVER`
+
+***********************************************************************************************************************************************************************************
+
+1. Navigate to `Create DB and StoredProcedures` folder and open READ ME.txt to understand how to generate DB and stored procedures.
